@@ -37,7 +37,7 @@ const update = (direcao) => {
 
 setInterval(() => {
     update(1);
-}, 3000);
+}, 4000);
 
 // click do botão próximo que chama a função update
 proximo.addEventListener("click", () => {

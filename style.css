@@ -30,13 +30,15 @@ header {
 }
 
 /* icone menu hamburguer */
-.menu{
-    font-size: 1.5rem;
+.menu {
+    font-size: 2rem;
     color: var(--branco1);
     display: none;
+    text-align: end;
+    width: 20px;
 }
 
-.menu-hamburguer{
+.menu-hamburguer {
     display: none;
 }
 
@@ -45,7 +47,7 @@ header {
     color: var(--corSecundária);
 }
 
-.logo img{
+.logo img {
     width: 100px;
 }
 
@@ -68,23 +70,26 @@ ul li {
     list-style: none;
 }
 
-ul li a:hover{
-  border-bottom: var(--corSecundária) 2px solid;
+ul li a:hover {
+    border-bottom: var(--corSecundária) 2px solid;
 }
+
 
 .dropdown {
     position: relative;
     cursor: pointer;
     z-index: 3;
-   
-
+    list-style: none;
+    
+    height: 100%;
+    display: flex;
+    align-items: center;
 }
 
 .dropdown a {
     color: black;
     z-index: 4;
 }
-
 
 .dropdown:hover .dropdown-menu {
     display: flex;
@@ -101,15 +106,15 @@ ul li a:hover{
     left: -20px;
 }
 
-.dropdown .bi-caret-up{
+.dropdown .bi-caret-up {
     display: none;
 }
 
-.dropdown:hover .bi-caret-up{
+.dropdown:hover .bi-caret-up {
     display: block;
 }
 
-.dropdown:hover .bi-caret-down{
+.dropdown:hover .bi-caret-down {
     display: none;
 }
 
@@ -127,8 +132,12 @@ p {
 
 .drop-arrow {
     display: flex;
-    gap: 5px;
+    height: 100%;
     align-items: center;
+    justify-content: center;
+    gap: 5px;
+  
+   
     color: var(--branco1);
 }
 
@@ -151,18 +160,15 @@ p {
     font-size: 1.7rem;
 }
 
-
 /* seção principal carousel */
 
 .container {
-    height: 700px;
+    height: 100vh;
     width: 100vw;
     position: relative;
-  
     overflow: hidden;
+    top: 120px;
 }
-
-
 
 .list {
     width: 40%;
@@ -184,9 +190,10 @@ p {
 }
 
 .item.active {
-    width: 2000px;
+    width: 100vw;
     opacity: 1;
     display: flex;
+   
     transform: translateX(0);
 }
 
@@ -201,22 +208,22 @@ p {
 }
 
 .product-img img {
-    width: 100%;
-  position: absolute;
-    filter: drop-shadow(0 0 2rem rgba(0, 247, 255, 0.3));
-    object-fit: cover;
+    width: 100em;
+    position: absolute;
+    object-fit:cover;
 }
 
 .content {
-    width: 55%;
+    width: 80%;
+    height: 80vh;
     padding-right: 80px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: center;
+ 
     position: absolute;
-    top: 500px;
-    left: 300px;
+    top: 300px;
+    left: 200px;
     z-index: 2;
 }
 
@@ -230,11 +237,12 @@ p {
 }
 
 .product-name {
-    font-size: 4.5rem;
+    font-size: 4rem;
     font-family: "Orbitron", sans-serif;
     line-height: 1.1;
     margin-bottom: 20px;
     text-shadow: 2px 5px 20px var(--corPrincipal);
+    color: var(--corSecundária);
 }
 
 .description {
@@ -263,8 +271,7 @@ p {
 .btn:hover {
     background: linear-gradient(
         160deg,
-        rgb(7, 126, 3) 100%
-        rgb(106, 250, 87) 0%,
+        rgb(7, 126, 3) 100% rgb(106, 250, 87) 0%
     );
 }
 
@@ -334,51 +341,81 @@ p {
 
 .dot.active {
     background-color: #3dee55;
-     width: 15px;
+    width: 15px;
     height: 15px;
 }
 
-
-
-
 /* media querie */
-@media (max-width: 768px){
-    nav{
-        width: 50%;
-        flex-direction: column;
+
+@media (max-width: 900px) {
+    .content{
+            left: 100px;
     }
 
-    .menu{
+    .product-name{
+        font-size: 3rem;
+    }
+}
+@media (max-width: 768px) {
+    nav {
+        /* width: 50%; */
+        /* flex-direction: column; */
+      align-items: end;
+      padding-right: 30px;
+    }
+
+    .menu {
         display: block;
     }
 
-    .menu-list{
+    .menu-list {
         display: none;
     }
 
-    .menu-hamburguer{
-        display: flex;
+    .menu-hamburguer {
         flex-direction: column;
+        justify-content: center;
+        border-radius: 10px;
         background: var(--branco2);
         height: 300px;
         width: 200px;
-        position:absolute;
-        top: 100px;
-        right: 0;
+        position: absolute;
+        top: 120px;
+        right: 10%;
+     
+      
     }
 
-    ul{
+    ul {
         flex-direction: column;
+        gap: 40px;
     }
 
-   ul li a, .drop-contatos{
-        color:#222222 ;
-    
+    ul li a,
+    .drop-contatos {
+        color: #222222;
     }
-        
-    .drop-arrow{
+
+    .drop-arrow {
         justify-content: center;
     }
+}
 
-    .
+@media(max-width: 500px){
+    
+.container{
+    height: 50vh;
+}
+
+.product-img img {
+    width: 40em;
+    top: 0;
+    
+}
+
+.content{
+      top: 100px;
+    left: 100px;
+    height: 300px;
+}
 }
