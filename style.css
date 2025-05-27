@@ -167,16 +167,18 @@ p {
     width: 100vw;
     position: relative;
     overflow: hidden;
-    top: 120px;
+    top: 105px;
 }
 
 .list {
-    width: 40%;
+    width: 100%;
     height: 100%;
     margin: 0 auto;
     position: relative;
+    
     display: flex;
     justify-content: center;
+    background: var(--corPrincipal);
 }
 
 .item {
@@ -193,7 +195,6 @@ p {
     width: 100vw;
     opacity: 1;
     display: flex;
-   
     transform: translateX(0);
 }
 
@@ -208,7 +209,7 @@ p {
 }
 
 .product-img img {
-    width: 100em;
+    width: 90%;
     position: absolute;
     object-fit:cover;
 }
@@ -220,7 +221,6 @@ p {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
- 
     position: absolute;
     top: 300px;
     left: 200px;
