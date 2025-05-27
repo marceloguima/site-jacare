@@ -163,7 +163,7 @@ p {
 /* seção principal carousel */
 
 .container {
-    height: 100vh;
+    height: 80vh;
     width: 100vw;
     position: relative;
     overflow: hidden;
