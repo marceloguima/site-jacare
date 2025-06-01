@@ -17,6 +17,12 @@
     --borderRadius2: 20px;
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+}
+
 header {
     position: fixed;
     z-index: 1;
@@ -26,7 +32,6 @@ header {
     display: flex;
     justify-content: space-around;
     align-items: center;
-   
 }
 
 /* icone menu hamburguer */
@@ -74,13 +79,12 @@ ul li a:hover {
     border-bottom: var(--corSecundária) 2px solid;
 }
 
-
 .dropdown {
     position: relative;
     cursor: pointer;
     z-index: 3;
     list-style: none;
-    
+
     height: 100%;
     display: flex;
     align-items: center;
@@ -136,8 +140,7 @@ p {
     align-items: center;
     justify-content: center;
     gap: 5px;
-  
-   
+
     color: var(--branco1);
 }
 
@@ -175,7 +178,7 @@ p {
     height: 100%;
     margin: 0 auto;
     position: relative;
-    
+
     display: flex;
     justify-content: center;
     background: var(--corPrincipal);
@@ -211,7 +214,7 @@ p {
 .product-img img {
     width: 90%;
     position: absolute;
-    object-fit:cover;
+    object-fit: cover;
 }
 
 .content {
@@ -345,14 +348,52 @@ p {
     height: 15px;
 }
 
+/* ---------------------------------- section serviços---------------------- */
+
+.services {
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(rgba(6, 27, 9, 0.8), rgba(0, 0, 0, 0.7)),
+        url("./images/imagem-de-fundo.jpg");
+    background-size: cover;
+
+    margin-top: 80px;
+    padding: 20px;
+    text-align: center;
+}
+
+.services h2 {
+    color: var(--branco1);
+    font-size: 2rem;
+}
+
+.content-services{
+    display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+
+  gap: 40px;
+
+  
+}
+
+.alinhamento,
+.balanceamento,
+.suspenssao,
+.freios {
+    background-color: var(--branco2);
+    width: 700px;
+    height: 400px;
+}
+
 /* media querie */
 
 @media (max-width: 900px) {
-    .content{
-            left: 100px;
+    .content {
+        left: 100px;
     }
 
-    .product-name{
+    .product-name {
         font-size: 3rem;
     }
 }
@@ -360,8 +401,8 @@ p {
     nav {
         /* width: 50%; */
         /* flex-direction: column; */
-      align-items: end;
-      padding-right: 30px;
+        align-items: end;
+        padding-right: 30px;
     }
 
     .menu {
@@ -382,8 +423,6 @@ p {
         position: absolute;
         top: 120px;
         right: 10%;
-     
-      
     }
 
     ul {
@@ -401,21 +440,20 @@ p {
     }
 }
 
-@media(max-width: 500px){
-    
-.container{
-    height: 50vh;
-}
+@media (max-width: 500px) {
+    .container {
+        height: 50vh;
+    }
 
-.product-img img {
-    width: 40em;
-    top: 0;
-    
-}
+    .product-img img {
+        width: 40em;
+        top: 0;
+    }
 
-.content{
-      top: 100px;
-    left: 100px;
-    height: 300px;
-}
+    .content {
+        top: 100px;
+        left: 30px;
+        height: 300px;
+        width: 100%;
+    }
 }
